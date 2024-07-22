@@ -1,0 +1,329 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".ClientHomeActivity">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/client_home_back_drop" />
+
+    <!-- Welcome Text -->
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/backgroundImage"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        android:text="Welcome to your next Adventure!"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        android:fontFamily="@font/roboto_bold" />
+
+    <!-- Subtext -->
+    <TextView
+        android:id="@+id/subText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcomeText"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="24dp"
+        android:text="Discover the Perfect Stay with us"
+        android:textColor="@color/colorTextBlack"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_regular" />
+
+    <!-- Rounded Background for Search Form -->
+    <RelativeLayout
+        android:id="@+id/searchForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subText"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_background_white"
+        android:padding="16dp">
+
+        <!-- Where Input -->
+        <EditText
+            android:id="@+id/locationEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ex: New York"
+            android:drawableStart="@drawable/ic_location"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:background="@drawable/edittext_background"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_regular"
+        android:textColorHint="@color/colorEditTextHint" />
+
+        <!-- Check-in and Check-out Date Pickers -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/locationEditText"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/checkInEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="DD/MM/YY"
+                    android:drawableEnd="@drawable/ic_calendar"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:background="@drawable/edittext_background"
+                android:textSize="16sp"
+                android:fontFamily="@font/roboto_regular"
+                android:textColorHint="@color/colorEditTextHint"
+                android:inputType="date" />
+
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/checkOutEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="DD/MM/YY"
+                    android:drawableEnd="@drawable/ic_calendar"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:background="@drawable/edittext_background"
+                android:textSize="16sp"
+                android:fontFamily="@font/roboto_regular"
+                android:textColorHint="@color/colorEditTextHint"
+                android:inputType="date" />
+            </LinearLayout>
+        </LinearLayout>
+            </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/counterLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@id/searchForm"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <!-- Adults Counter -->
+        <LinearLayout
+            android:id="@+id/adultsCounterLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/adultsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adults"
+                android:textColor="@color/colorEditTextHint"
+                android:textSize="12sp"
+                android:fontFamily="@font/roboto_regular" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/decrementAdults"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_minus"
+                    android:scaleType="centerInside"/>
+
+                <TextView
+                    android:id="@+id/adultsCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:text="1"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/roboto_regular" />
+
+                <ImageView
+                    android:id="@+id/incrementAdults"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_plus"
+                    android:scaleType="centerInside"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="16dp"
+            android:layout_height="wrap_content" />
+
+        <!-- Children Counter -->
+        <LinearLayout
+            android:id="@+id/childrenCounterLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/childrenLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Children"
+                android:textColor="@color/colorEditTextHint"
+                android:textSize="12sp"
+                android:fontFamily="@font/roboto_regular" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/decrementChildren"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_minus"
+                    android:scaleType="centerInside"/>
+
+                <TextView
+                    android:id="@+id/childrenCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:text="0"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/roboto_regular" />
+
+                <ImageView
+                    android:id="@+id/incrementChildren"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_plus"
+                    android:scaleType="centerInside"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="16dp"
+            android:layout_height="wrap_content" />
+
+        <!-- Room Counter -->
+        <LinearLayout
+            android:id="@+id/roomCounterLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/roomLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Room"
+                android:textColor="@color/colorEditTextHint"
+                android:textSize="12sp"
+                android:fontFamily="@font/roboto_regular" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/decrementRooms"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_minus"
+                    android:scaleType="centerInside"/>
+
+                <TextView
+                    android:id="@+id/roomCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:text="1"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/roboto_regular" />
+
+                <ImageView
+                    android:id="@+id/incrementRoom"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_plus"
+                    android:scaleType="centerInside"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Find Button -->
+    <Button
+        android:id="@+id/findButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@id/counterLayout"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_background_blue"
+        android:text="FIND"
+        android:textColor="@color/colorTextWhite"
+        android:textSize="18sp"
+        android:fontFamily="@font/roboto_black" />
+
+</RelativeLayout>
