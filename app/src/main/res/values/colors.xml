@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4C4DDC</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="colorTextWhite">#ffffff</color>
+    <color name="colorEditText">#F3F1F1</color>
+    <color name="colorTextBlack">#000000</color>
+    <color name="colorEditTextHint">#939393</color>
+    <color name="colorButtonTextBlack">#1E1E1E</color>
+    <color name="colorWhite">#FFFFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorLine">#939393</color>
+
+</resources>
