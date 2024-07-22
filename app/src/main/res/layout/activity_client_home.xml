@@ -22,9 +22,21 @@
         android:layout_below="@id/backgroundImage"
         android:layout_marginTop="16dp"
         android:layout_marginStart="24dp"
-        android:text="Welcome to your next Adventure!"
+        android:text="Welcome to your next"
         android:textColor="@color/colorPrimary"
-        android:textSize="24sp"
+        android:textSize="30sp"
+        android:fontFamily="@font/roboto_bold" />
+
+    <TextView
+        android:id="@+id/Adventrue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/backgroundImage"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="24dp"
+        android:text="Adventure!"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
         android:fontFamily="@font/roboto_bold" />
 
     <!-- Subtext -->
@@ -32,7 +44,7 @@
         android:id="@+id/subText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/welcomeText"
+        android:layout_below="@id/Adventrue"
         android:layout_marginTop="8dp"
         android:layout_marginStart="24dp"
         android:text="Discover the Perfect Stay with us"
