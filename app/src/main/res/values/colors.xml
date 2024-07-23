@@ -3,6 +3,7 @@
     <color name="colorPrimary">#4C4DDC</color>
     <color name="colorPrimaryDark">#000000</color>
     <color name="purple_700">#FF3700B3</color>
+    <color name="colorTextBlueLight">#007EF2</color>
     <color name="colorTextWhite">#ffffff</color>
     <color name="colorEditText">#F3F1F1</color>
     <color name="colorTextBlack">#000000</color>
