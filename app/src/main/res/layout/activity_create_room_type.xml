@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateRoomTypeActivity"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_round_arrow_back_ios_24"
+                android:contentDescription="Back"
+                android:onClick="onClickBack"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADD NEW ROOM TYPE"
+                android:textSize="24sp"
+                android:textColor="@color/colorTextWhite"
+                android:fontFamily="@font/roboto_black" />
+        </LinearLayout>
+
+        <!-- Room Type Details Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background_rounded"
+            android:elevation="4dp"
+            android:padding="24dp"
+            android:layout_marginTop="24dp">
+
+            <!-- Room Name -->
+            <EditText
+                android:id="@+id/roomName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Room Name (e.g., Deluxe Room)"
+                android:background="@drawable/edit_text_rounded_fields"
+                android:padding="16dp"
+                android:inputType="text"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Room Description -->
+            <EditText
+                android:id="@+id/roomDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Description"
+                android:background="@drawable/edit_text_rounded_fields"
+                android:padding="16dp"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:gravity="top|start"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Room Price -->
+            <EditText
+                android:id="@+id/roomPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Room Price"
+                android:background="@drawable/edit_text_rounded_fields"
+                android:padding="16dp"
+                android:inputType="numberDecimal"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Number of Adults -->
+            <EditText
+                android:id="@+id/numAdults"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Number of Adults"
+                android:background="@drawable/edit_text_rounded_fields"
+                android:padding="16dp"
+                android:inputType="number"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Number of Children -->
+            <EditText
+                android:id="@+id/numChildren"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Number of Children"
+                android:background="@drawable/edit_text_rounded_fields"
+                android:padding="16dp"
+                android:inputType="number"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Room Facilities -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Facilities"
+                android:textSize="16sp"
+                android:textColor="@color/colorTextBlack"
+                android:fontFamily="@font/roboto_bold"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+                <CheckBox
+                    android:id="@+id/facilityWiFi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Free Wi-Fi"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/roboto_regular" />
+
+                <CheckBox
+                    android:id="@+id/facilityAC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Air Conditioning"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/roboto_regular" />
+
+                <CheckBox
+                    android:id="@+id/facilityTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Flat-Screen TV"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/roboto_regular" />
+
+                <CheckBox
+                    android:id="@+id/facilityMinibar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Minibar"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/roboto_regular" />
+
+                <!-- Additional facilities can be added here -->
+            </LinearLayout>
+
+            <!-- Room Images -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upload Images"
+                android:textSize="16sp"
+                android:textColor="@color/colorTextBlack"
+                android:fontFamily="@font/roboto_bold"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btnUploadImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Upload Images"
+                android:textColor="@color/colorTextWhite"
+                android:textAllCaps="false"
+                android:fontFamily="@font/roboto_bold"
+                android:onClick="onClickUploadImage"
+                android:padding="16dp"
+                app:cornerRadius="35dp" />
+        </LinearLayout>
+
+        <!-- Save Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="24dp">
+
+            <Button
+                android:id="@+id/btnSaveRoomType"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/ColorButtonLight"
+                android:text="Save"
+                android:textColor="@color/colorTextBlueLight"
+                android:textAllCaps="false"
+                android:fontFamily="@font/roboto_bold"
+                android:padding="16dp"
+                android:onClick="onClickSaveRoomType"
+                app:cornerRadius="35dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

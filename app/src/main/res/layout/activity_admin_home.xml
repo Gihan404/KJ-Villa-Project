@@ -261,7 +261,7 @@
                         android:fontFamily="@font/roboto_black"
                         android:textColor="@color/colorTextWhite"
                         android:textSize="19sp"
-                        android:text="Update Room"/>
+                        android:text="Update Room Type"/>
 
                 </LinearLayout>
 

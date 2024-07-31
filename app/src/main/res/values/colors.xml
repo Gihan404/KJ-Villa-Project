@@ -12,5 +12,6 @@
     <color name="colorWhite">#FFFFFFFF</color>
     <color name="colorBlack">#000000</color>
     <color name="colorLine">#939393</color>
+    <color name="ColorButtonLight">#EDEDFC</color>
 
 </resources>

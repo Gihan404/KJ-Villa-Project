@@ -110,10 +110,9 @@
         <Button
             android:id="@+id/signupButton"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_below="@id/passwordEditText"
             android:layout_marginTop="30dp"
-            android:background="@drawable/button_background_blue"
             android:fontFamily="@font/roboto_black"
             android:text="Sign Up"
             android:textColor="@color/colorTextWhite"
@@ -154,13 +153,13 @@
         <Button
             android:id="@+id/loginButton"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_below="@id/signupButton"
             android:layout_marginTop="60dp"
-            android:background="@drawable/button_background_light"
+            android:backgroundTint="@color/ColorButtonLight"
             android:fontFamily="@font/roboto_black"
             android:text="Login"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorTextBlueLight"
             android:textSize="18sp" />
     </RelativeLayout>
 

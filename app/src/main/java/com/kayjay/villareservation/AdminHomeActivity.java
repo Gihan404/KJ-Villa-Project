@@ -33,4 +33,19 @@ public class AdminHomeActivity extends AppCompatActivity {
         Intent intent = new Intent(this, UpdateEmployeeActivity.class);
         startActivity(intent);
     }
+
+    public void onClickDeleteEmp(View view){
+        Intent intent = new Intent(this, DeleteEmployeeActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickCreateRoomType(View view){
+        Intent intent = new Intent(this, CreateRoomTypeActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickLogout(View view){
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+    }
 }

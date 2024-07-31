@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".UpdateRoomTypeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="Back"
+                android:onClick="onClickBack"
+                android:src="@drawable/ic_round_arrow_back_ios_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_black"
+                android:text="UPDATE ROOM TYPE"
+                android:textColor="@color/colorTextWhite"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <!-- Search and Select Room Type Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Select Room Type"
+                android:textColor="@color/colorTextWhite"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/spinnerRoomType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_rounded_fields"
+                android:padding="16dp" />
+        </LinearLayout>
+
+        <!-- Room Details Form -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background_rounded"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Room Name -->
+            <EditText
+                android:id="@+id/roomName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/edit_text_rounded_fields"
+                android:fontFamily="@font/roboto_regular"
+                android:hint="Room Name"
+                android:inputType="text"
+                android:padding="16dp"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="14sp" />
+
+            <!-- Room Description -->
+            <EditText
+                android:id="@+id/roomDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/edit_text_rounded_fields"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="top|start"
+                android:hint="Description"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:padding="16dp"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="14sp" />
+
+            <!-- Room Price -->
+            <EditText
+                android:id="@+id/roomPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/edit_text_rounded_fields"
+                android:fontFamily="@font/roboto_regular"
+                android:hint="Room Price"
+                android:inputType="numberDecimal"
+                android:padding="16dp"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="14sp" />
+
+            <!-- Number of Adults and Children -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/numAdults"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_rounded_fields"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="Adults"
+                    android:inputType="number"
+                    android:padding="16dp"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/numChildren"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_rounded_fields"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="Children"
+                    android:inputType="number"
+                    android:padding="16dp"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Room Facilities -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Facilities"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/facilityWiFi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Free Wi-Fi"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/facilityAC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Air Conditioning"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/facilityTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Flat-Screen TV"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/facilityMinibar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Minibar"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="14sp" />
+
+                <!-- Additional facilities can be added here -->
+            </LinearLayout>
+
+            <!-- Room Images -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Upload Images"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnUploadImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:onClick="onClickUploadImage"
+                android:padding="16dp"
+                android:text="Upload Images"
+                android:textAllCaps="false"
+                android:textColor="@color/colorTextWhite"
+                app:cornerRadius="35dp" />
+        </LinearLayout>
+
+        <!-- Save Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnUpdateRoomType"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/ColorButtonLight"
+                android:fontFamily="@font/roboto_bold"
+                android:onClick="onClickUpdateRoomType"
+                android:padding="18dp"
+                android:text="Update Room Type"
+                android:textAllCaps="false"
+                android:textColor="@color/colorTextBlueLight"
+                app:cornerRadius="35dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
