@@ -7,6 +7,7 @@
     <!-- Top Section with Back Arrow -->
     <ImageView
         android:id="@+id/backArrow"
+        android:onClick="onClickBackToStart"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginStart="16dp"
@@ -89,6 +90,7 @@
         <!-- Forget Password Link -->
         <TextView
             android:id="@+id/forgetPasswordText"
+            android:onClick="onClickForgetPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -102,6 +104,7 @@
         <!-- Login Button -->
         <Button
             android:id="@+id/loginButton"
+            android:onClick="onClickSignIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/forgetPasswordText"
@@ -146,13 +149,14 @@
         <!-- Sign Up Button -->
         <Button
             android:id="@+id/signupButton"
+            android:onClick="onClickSignUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/loginButton"
             android:layout_marginTop="60dp"
             android:background="@drawable/button_background_light"
             android:text="Sign Up"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorTextWhite"
             android:textSize="18sp"
             android:fontFamily="@font/roboto_black" />
     </RelativeLayout>

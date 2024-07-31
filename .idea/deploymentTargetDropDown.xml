@@ -11,10 +11,10 @@
       <entry key="ClientUpdateActivity">
         <State />
       </entry>
-      <entry key="LoginActivity">
+      <entry key="RegisterActivity">
         <State />
       </entry>
-      <entry key="RegisterActivity">
+      <entry key="WelcomeActivity">
         <State />
       </entry>
       <entry key="app">

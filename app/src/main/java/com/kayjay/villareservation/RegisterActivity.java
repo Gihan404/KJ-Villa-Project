@@ -1,6 +1,8 @@
 package com.kayjay.villareservation;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,4 +23,11 @@ public class RegisterActivity extends AppCompatActivity {
             return insets;
         });
     }
+
+    //Move to Start Activity Screen
+    public void onClickBackToStart(View view){
+        Intent intent = new Intent(this, StartActivity.class);
+        startActivity(intent);
+    }
+
 }
