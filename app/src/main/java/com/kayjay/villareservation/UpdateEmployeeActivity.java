@@ -10,13 +10,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class AdminHomeActivity extends AppCompatActivity {
+public class UpdateEmployeeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_admin_home);
+        setContentView(R.layout.activity_update_employee);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -24,13 +24,8 @@ public class AdminHomeActivity extends AppCompatActivity {
         });
     }
 
-    public void onClickEmpCreation(View view){
-        Intent intent = new Intent(this, EmployeeRegActivity.class);
-        startActivity(intent);
-    }
-
-    public void onClickUpdateEmp(View view){
-        Intent intent = new Intent(this, UpdateEmployeeActivity.class);
+    public void onClickBack(View view){
+        Intent intent = new Intent(this, AdminHomeActivity.class);
         startActivity(intent);
     }
 }

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".UpdateEmployeeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/backArrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_round_arrow_back_ios_24"
+                android:contentDescription="Back"
+                android:layout_marginEnd="8dp"
+                android:onClick="onClickBack" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UPDATE EMPLOYEE"
+                android:textSize="24sp"
+                android:textColor="@color/colorTextWhite"
+                android:fontFamily="@font/roboto_black" />
+        </LinearLayout>
+
+        <!-- Employee Details Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:elevation="4dp"
+            android:padding="24dp"
+            android:layout_marginTop="24dp">
+
+            <!-- Search Section within Employee Details -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
+
+                <EditText
+                    android:id="@+id/searchEmployee"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Search by Name or Staff ID"
+                    android:background="@drawable/edit_text_rounded_fields"
+                    android:padding="16dp"
+                    android:inputType="text"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/roboto_regular" />
+
+                <Button
+                    android:id="@+id/searchButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_background_blue"
+                    android:text="Search"
+                    android:textColor="@color/colorTextWhite"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_marginStart="8dp"
+                    android:padding="16dp"
+                    android:onClick="onClickSearchEmployee" />
+            </LinearLayout>
+
+            <!-- Employee Information Fields -->
+            <EditText
+                android:id="@+id/staffIdUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Staff ID"
+                android:background="@drawable/edit_text_rounded_fields"
+                android:padding="16dp"
+                android:inputType="text"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginBottom="12dp"
+                android:enabled="false" />
+
+            <EditText
+                android:id="@+id/firstNameUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="First Name"
+                android:background="@drawable/edit_text_rounded_fields"
+                android:padding="16dp"
+                android:inputType="text"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/lastNameUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Last Name"
+                android:background="@drawable/edit_text_rounded_fields"
+                android:padding="16dp"
+                android:inputType="text"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginBottom="12dp" />
+
+            <Spinner
+                android:id="@+id/designationUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_rounded_fields"
+                android:padding="16dp"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/emailUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="E-Mail Address"
+                android:background="@drawable/edit_text_rounded_fields"
+                android:padding="16dp"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/contactNoUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Contact Number"
+                android:background="@drawable/edit_text_rounded_fields"
+                android:padding="16dp"
+                android:inputType="phone"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/usernameUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username"
+                android:background="@drawable/edit_text_rounded_fields"
+                android:padding="16dp"
+                android:inputType="text"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Role"
+                android:textSize="16sp"
+                android:textColor="@color/colorTextBlack"
+                android:fontFamily="@font/roboto_bold"
+                android:layout_marginBottom="8dp" />
+
+            <RadioGroup
+                android:id="@+id/groupUserRoleUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <RadioButton
+                    android:id="@+id/radioAdminUpdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Administrator"
+                    android:checked="true"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/radioReceptionistUpdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Receptionist"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="14sp"
+                    android:layout_marginStart="32dp" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/passwordUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:background="@drawable/edit_text_rounded_fields"
+                android:padding="16dp"
+                android:inputType="textPassword"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/conPasswordUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Confirm Password"
+                android:background="@drawable/edit_text_rounded_fields"
+                android:padding="16dp"
+                android:inputType="textPassword"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Update Button -->
+            <Button
+                android:id="@+id/updateEmp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_background_blue"
+                android:text="Update"
+                android:textColor="@color/colorTextWhite"
+                android:textAllCaps="false"
+                android:fontFamily="@font/roboto_bold"
+                android:padding="16dp"
+                android:onClick="onClickUpdateEmployee" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
