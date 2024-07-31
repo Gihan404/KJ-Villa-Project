@@ -1,0 +1,180 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClientUpdateActivity">
+
+    <!-- Header section -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UPDATE PROFILE"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change your user information!"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Profile Form inside ScrollView -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:layout_above="@id/bottom_navigation"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/profile_background">
+
+            <!-- First Name -->
+            <EditText
+                android:id="@+id/first_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="First Name"
+                android:background="@drawable/edit_text_rounded_fields"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <!-- Last Name -->
+            <EditText
+                android:id="@+id/last_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Last Name"
+                android:background="@drawable/edit_text_rounded_fields"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <!-- NIC Number -->
+            <EditText
+                android:id="@+id/nic_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="NIC Number"
+                android:background="@drawable/edit_text_rounded_fields"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <!-- Email Address -->
+            <EditText
+                android:id="@+id/email_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="E-Mail Address"
+                android:background="@drawable/edit_text_rounded_fields"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <!-- Contact Number -->
+            <EditText
+                android:id="@+id/contact_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Contact Number"
+                android:background="@drawable/edit_text_rounded_fields"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <!-- Address: Street No -->
+            <EditText
+                android:id="@+id/address_street_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Address: Street No"
+                android:background="@drawable/edit_text_rounded_fields"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <!-- Address: Street Name -->
+            <EditText
+                android:id="@+id/address_street_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Address: Street Name"
+                android:background="@drawable/edit_text_rounded_fields"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <!-- Address: City -->
+            <EditText
+                android:id="@+id/address_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Address: City"
+                android:background="@drawable/edit_text_rounded_fields"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <!-- Address: Postal Code -->
+            <EditText
+                android:id="@+id/address_postal_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Address: Postal Code"
+                android:background="@drawable/edit_text_rounded_fields"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <!-- Address: Country -->
+            <EditText
+                android:id="@+id/address_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Address: Country"
+                android:background="@drawable/edit_text_rounded_fields"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <!-- UserName -->
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username"
+                android:background="@drawable/edit_text_rounded_fields"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <!-- Update Button -->
+            <Button
+                android:id="@+id/update_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Update"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="16dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- BottomNavigationView anchored to the bottom -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite"
+        app:menu="@drawable/bottom_nav_menu" />
+</RelativeLayout>

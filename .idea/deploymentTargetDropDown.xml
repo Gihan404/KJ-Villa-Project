@@ -2,32 +2,19 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
+      <entry key="AdminHomeActivity">
+        <State />
+      </entry>
       <entry key="ClientHomeActivity">
+        <State />
+      </entry>
+      <entry key="ClientUpdateActivity">
         <State />
       </entry>
       <entry key="LoginActivity">
         <State />
       </entry>
       <entry key="RegisterActivity">
-        <State />
-      </entry>
-      <entry key="StartActivity">
-        <State>
-          <targetSelectedWithDropDown>
-            <Target>
-              <type value="QUICK_BOOT_TARGET" />
-              <deviceKey>
-                <Key>
-                  <type value="VIRTUAL_DEVICE_PATH" />
-                  <value value="C:\Users\Gihan\.android\avd\Pixel_7_API_30.avd" />
-                </Key>
-              </deviceKey>
-            </Target>
-          </targetSelectedWithDropDown>
-          <timeTargetWasSelectedWithDropDown value="2024-07-19T19:43:55.131315700Z" />
-        </State>
-      </entry>
-      <entry key="WelcomeActivity">
         <State />
       </entry>
       <entry key="app">
