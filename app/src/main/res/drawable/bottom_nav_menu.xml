@@ -8,7 +8,7 @@
         android:icon="@drawable/ic_booking"
         android:title="My Bookings" />
     <item
-        android:id="@+id/navigation_chats"
+        android:id="@+id/navigation_inquiry"
         android:icon="@drawable/ic_chats"
         android:title="Chats" />
     <item

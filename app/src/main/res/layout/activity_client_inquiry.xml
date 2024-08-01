@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ClientInquiryActivity">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="?attr/actionBarTheme"
+        android:title="Client Inquiry"
+        android:titleTextColor="@android:color/white" />
+
+    <!-- Inquiry Title -->
+    <EditText
+        android:id="@+id/editTextInquiryTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Inquiry Title"
+        android:padding="10dp"
+        android:background="@drawable/edit_text_rounded_fields"
+        android:layout_marginTop="16dp"
+        android:inputType="text"/>
+
+    <!-- Inquiry Type -->
+    <Spinner
+        android:id="@+id/spinnerInquiryType"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edit_text_rounded_fields" />
+
+    <!-- Inquiry Details -->
+    <EditText
+        android:id="@+id/editTextInquiryDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Inquiry Details"
+        android:padding="10dp"
+        android:background="@drawable/edit_text_rounded_fields"
+        android:layout_marginTop="16dp"
+        android:inputType="textMultiLine"
+        android:minLines="3"
+        android:maxLines="5"/>
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/buttonSubmitInquiry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit Inquiry"
+        android:layout_marginTop="16dp"
+        android:background="?attr/colorPrimary"
+        android:textColor="@android:color/white"
+        android:padding="10dp"/>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/darker_gray" />
+
+    <!-- RecyclerView for displaying inquiries -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewInquiries"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"/>
+
+
+    <!-- Bottom Navigation View -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite"
+        app:menu="@drawable/bottom_nav_menu" />
+</LinearLayout>

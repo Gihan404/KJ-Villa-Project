@@ -25,6 +25,9 @@ public class Client {
     private static String idNo;
     private static String userRole;
 
+    public Client() {
+    }
+
     public Client(String firstName, String lastName, String nic, String email, String contactNo, String streetNo, String streetName, String city, String postalCode, String country, String username, String password, String confirmPassword, String type, int createUpdateUID, Date createUpdateDate, int clientId) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -46,6 +49,21 @@ public class Client {
     }
 
     public Client(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    public Client(String firstName, String lastName, String nic, String email, String contactNo, String streetNo, String streetName, String city, String postalCode, String country, String username, String password) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.nic = nic;
+        this.email = email;
+        this.contactNo = contactNo;
+        this.streetNo = streetNo;
+        this.streetName = streetName;
+        this.city = city;
+        this.postalCode = postalCode;
+        this.country = country;
         this.username = username;
         this.password = password;
     }
@@ -193,6 +211,7 @@ public class Client {
     public static void setIdNo(String idNo) {
         Client.idNo = idNo;
     }
+
 
     public static String getUserRole() {
         return userRole;

@@ -142,7 +142,7 @@
             <View
                 android:layout_width="150dp"
                 android:layout_height="1dp"
-                android:background="#939393" />
+                android:background="@color/colorLine" />
         </LinearLayout>
 
         <!-- Sign Up Button -->
@@ -154,10 +154,10 @@
             android:layout_below="@id/loginButton"
             android:layout_marginTop="60dp"
             android:backgroundTint="@color/ColorButtonLight"
+            android:fontFamily="@font/roboto_black"
             android:text="Sign Up"
             android:textColor="@color/colorTextBlueLight"
-            android:textSize="16sp"
-            android:fontFamily="@font/roboto_black" />
+            android:textSize="16sp" />
     </RelativeLayout>
 
 </RelativeLayout>

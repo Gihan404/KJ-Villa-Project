@@ -50,7 +50,7 @@
 
         <!-- Name Input -->
         <EditText
-            android:id="@+id/nameEditText"
+            android:id="@+id/nameClientReg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/registerHeaderText"
@@ -64,10 +64,10 @@
 
         <!-- Contact Number Input -->
         <EditText
-            android:id="@+id/contactEditText"
+            android:id="@+id/contactNoClientReg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/nameEditText"
+            android:layout_below="@id/nameClientReg"
             android:layout_marginTop="30dp"
             android:background="@drawable/edittext_background"
             android:fontFamily="@font/roboto_regular"
@@ -79,10 +79,10 @@
 
         <!-- Email Input -->
         <EditText
-            android:id="@+id/emailEditText"
+            android:id="@+id/emailClientReg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/contactEditText"
+            android:layout_below="@id/contactNoClientReg"
             android:layout_marginTop="30dp"
             android:background="@drawable/edittext_background"
             android:fontFamily="@font/roboto_regular"
@@ -93,10 +93,10 @@
 
         <!-- Password Input -->
         <EditText
-            android:id="@+id/passwordEditText"
+            android:id="@+id/passwordClientReg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/emailEditText"
+            android:layout_below="@id/emailClientReg"
             android:layout_marginTop="30dp"
             android:background="@drawable/edittext_background"
             android:fontFamily="@font/roboto_regular"
@@ -109,9 +109,10 @@
         <!-- Sign Up Button -->
         <Button
             android:id="@+id/signupButton"
+            android:onClick="onClickClientRegister"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:layout_below="@id/passwordEditText"
+            android:layout_below="@id/passwordClientReg"
             android:layout_marginTop="30dp"
             android:fontFamily="@font/roboto_black"
             android:text="Sign Up"
@@ -152,6 +153,7 @@
         <!-- Login Button -->
         <Button
             android:id="@+id/loginButton"
+            android:onClick="onClickBackToLogin"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_below="@id/signupButton"
@@ -161,6 +163,7 @@
             android:text="Login"
             android:textColor="@color/colorTextBlueLight"
             android:textSize="18sp" />
+
     </RelativeLayout>
 
 </RelativeLayout>

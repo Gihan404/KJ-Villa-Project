@@ -28,6 +28,8 @@ constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayo
 navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigationFragment" }
 navigation-ui = { group = "androidx.navigation", name = "navigation-ui", version.ref = "navigationUi" }
 room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }
+glide = { group = "com.github.bumptech.glide", name = "glide", version = "4.15.1" }
+glide-compiler = { group = "com.github.bumptech.glide", name = "compiler", version = "4.15.1" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

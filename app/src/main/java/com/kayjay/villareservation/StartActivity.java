@@ -32,7 +32,7 @@ public class StartActivity extends AppCompatActivity {
 
     // Move to the Registration Screen
     public void onClickRegisterClient(View view){
-        Intent intent = new Intent(this, RegisterActivity.class);
+        Intent intent = new Intent(this, ClientRegisterActivity.class);
         startActivity(intent);
     }
 

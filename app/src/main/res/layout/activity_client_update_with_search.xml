@@ -12,32 +12,75 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
-        android:gravity="center"
-        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
         android:padding="16dp">
 
-        <TextView
+        <ImageButton
+            android:id="@+id/back_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="UPDATE PROFILE"
-            android:textColor="@android:color/white"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_round_arrow_back_ios_24" />
 
-        <TextView
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UPDATE PROFILE"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change your user information!"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Search Section -->
+    <LinearLayout
+        android:id="@+id/search_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_below="@id/header"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/search_nic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Search by NIC"
+            android:background="@drawable/edit_text_rounded_fields"
+            android:padding="10dp"
+            android:layout_marginEnd="10dp"/>
+
+        <Button
+            android:id="@+id/search_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Change your user information!"
-            android:textColor="@android:color/white"
-            android:textSize="16sp" />
+            android:text="Search"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"/>
     </LinearLayout>
 
     <!-- Profile Form inside ScrollView -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/header"
-        android:layout_above="@id/bottom_navigation"
+        android:layout_below="@id/search_section"
         android:padding="16dp">
 
         <LinearLayout
@@ -75,7 +118,8 @@
                 android:hint="NIC Number"
                 android:background="@drawable/edit_text_rounded_fields"
                 android:padding="10dp"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp"
+                android:enabled="false"/>
 
             <!-- Email Address -->
             <EditText
@@ -168,7 +212,7 @@
                 android:padding="10dp"
                 android:layout_marginBottom="10dp"/>
 
-            <!-- Password -->
+            <!-- Confirm Password -->
             <EditText
                 android:id="@+id/conPasswordUpdateClient"
                 android:layout_width="match_parent"
@@ -191,12 +235,4 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- BottomNavigationView anchored to the bottom -->
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@color/colorWhite"
-        app:menu="@drawable/bottom_nav_menu" />
 </RelativeLayout>

@@ -10,13 +10,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class CreateRoomTypeActivity extends AppCompatActivity {
+public class RoomCreateActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_create_room_type);
+        setContentView(R.layout.activity_create_new_room);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -28,5 +28,4 @@ public class CreateRoomTypeActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AdminHomeActivity.class);
         startActivity(intent);
     }
-
 }

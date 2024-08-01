@@ -30,17 +30,32 @@ public class AdminHomeActivity extends AppCompatActivity {
     }
 
     public void onClickUpdateEmp(View view){
-        Intent intent = new Intent(this, UpdateEmployeeActivity.class);
+        Intent intent = new Intent(this, EmployeeUpdateActivity.class);
         startActivity(intent);
     }
 
     public void onClickDeleteEmp(View view){
-        Intent intent = new Intent(this, DeleteEmployeeActivity.class);
+        Intent intent = new Intent(this, EmployeeDeleteActivity.class);
         startActivity(intent);
     }
 
     public void onClickCreateRoomType(View view){
-        Intent intent = new Intent(this, CreateRoomTypeActivity.class);
+        Intent intent = new Intent(this, RoomTypeCreateActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickUpdateRoomType(View view){
+        Intent intent = new Intent(this, RoomTypeUpdateActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickCreateRoom(View view){
+        Intent intent = new Intent(this, RoomCreateActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickUpdateRoom(View view){
+        Intent intent = new Intent(this, RoomCreateActivity.class);
         startActivity(intent);
     }
 

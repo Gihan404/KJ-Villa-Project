@@ -233,7 +233,7 @@
 
             <!-- Update Room Card -->
             <androidx.cardview.widget.CardView
-                android:onClick="onClickUpdateRoom"
+                android:onClick="onClickUpdateRoomType"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 app:cardCornerRadius="15dp"
@@ -277,9 +277,9 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp">
 
-            <!-- Delete Room Card -->
+            <!-- Create Room Card -->
             <androidx.cardview.widget.CardView
-                android:onClick="onClickDeleteRoom"
+                android:onClick="onClickCreateRoom"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 app:cardCornerRadius="15dp"
@@ -307,15 +307,15 @@
                         android:fontFamily="@font/roboto_black"
                         android:textColor="@color/colorTextWhite"
                         android:textSize="19sp"
-                        android:text="Delete Room"/>
+                        android:text="Create Room"/>
 
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
-            <!-- Update Room Status Card -->
+            <!-- Update Room -->
             <androidx.cardview.widget.CardView
-                android:onClick="onClickUpdateRoomStatus"
+                android:onClick="onClickUpdateRoom"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 app:cardCornerRadius="15dp"
@@ -343,7 +343,7 @@
                         android:fontFamily="@font/roboto_black"
                         android:textColor="@color/colorTextWhite"
                         android:textSize="19sp"
-                        android:text="Update Room Status"/>
+                        android:text="Update Room"/>
 
                 </LinearLayout>
 

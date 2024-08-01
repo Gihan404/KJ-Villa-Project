@@ -45,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
 
     // Move to the Sign Up Activity Screen
     public void onClickSignUp(View view){
-        Intent intent = new Intent(this, RegisterActivity.class);
+        Intent intent = new Intent(this, ClientRegisterActivity.class);
         startActivity(intent);
     }
 
@@ -67,6 +67,7 @@ public class LoginActivity extends AppCompatActivity {
                 if(dataHandler.LoginVerificationClient(client)){
                     if(client.getType().equals("client")){
                         Intent intent = new Intent(this, ClientHomeActivity.class);
+                        intent.putExtra("CLIENT_ID", Client.getIdNo());
                         startActivity(intent);
                     }
                 }else if(dataHandler.loginVerificationEmp(client)){
