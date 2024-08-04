@@ -55,7 +55,7 @@ public class AdminHomeActivity extends AppCompatActivity {
     }
 
     public void onClickUpdateRoom(View view){
-        Intent intent = new Intent(this, RoomCreateActivity.class);
+        Intent intent = new Intent(this, RoomUpdateActivity.class);
         startActivity(intent);
     }
 

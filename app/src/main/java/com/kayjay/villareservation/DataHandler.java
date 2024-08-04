@@ -105,4 +105,84 @@ public class DataHandler {
         return false;
     }
 
+    public boolean checkEmployee(Employee employee) throws Exception{
+        Cursor cursor = db.rawQuery("select * from employee where staff_id = '"+employee.getStaffId()+"'", null);
+        if (cursor.moveToFirst()){
+            return true;
+        }
+        return false;
+    }
+
+    public boolean createEmployee(Employee employee) throws  Exception{
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("staff_id", employee.getStaffId());
+        contentValues.put("first_name", employee.getFirstName());
+        contentValues.put("last_name", employee.getLastName());
+        contentValues.put("designation", employee.getDesignation());
+        contentValues.put("email", employee.getEmail());
+        contentValues.put("contact_no", employee.getContactNo());
+        contentValues.put("username", employee.getUsername());
+        contentValues.put("user_role", employee.getUserRole());
+        contentValues.put("password", employee.getPassword());
+        contentValues.put("status", employee.getEmpStatus());
+
+        long result = db.insert("employee", null, contentValues);
+        if (result == -1) {
+            return false;
+        }else {
+            return true;
+        }
+
+    }
+
+    public boolean searchEmployee(Employee employee) throws Exception{
+        Cursor cursor = db.rawQuery("select * from employee where staff_id = '"+employee.getStaffId()+"' and status = 1", null);
+        if (cursor.moveToFirst()){
+            employee.setStaffId(cursor.getString(1));
+            employee.setFirstName(cursor.getString(2));
+            employee.setLastName(cursor.getString(3));
+            employee.setDesignation(cursor.getString(4));
+            employee.setEmail(cursor.getString(5));
+            employee.setContactNo(cursor.getString(6));
+            employee.setUsername(cursor.getString(7));
+            employee.setUserRole(cursor.getString(8));
+            employee.setPassword(cursor.getString(9));
+            return true;
+        }
+        return false;
+    }
+
+    public boolean updateEmployee(Employee employee) throws Exception{
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("first_name", employee.getFirstName());
+        contentValues.put("last_name", employee.getLastName());
+        contentValues.put("designation", employee.getDesignation());
+        contentValues.put("email", employee.getEmail());
+        contentValues.put("contact_no", employee.getContactNo());
+        contentValues.put("username", employee.getUsername());
+        contentValues.put("user_role", employee.getUserRole());
+        contentValues.put("password", employee.getPassword());
+        contentValues.put("status", employee.getEmpStatus());
+
+        long result = db.update("employee", contentValues, "staff_id = '" + employee.getStaffId() + "'", null);
+        if (result == -1) {
+            return false;
+        } else {
+            return true;
+        }
+
+    }
+
+    public boolean deleteEmployee(Employee employee) throws Exception{
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("status", employee.getEmpStatus());
+
+        long result =db.update("employee", contentValues, "staff_id = '"+ employee.getStaffId() +"'", null);
+        if (result == -1){
+            return false;
+        }else {
+            return true;
+        }
+    }
+
 }

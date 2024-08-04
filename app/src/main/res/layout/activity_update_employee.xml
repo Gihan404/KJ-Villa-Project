@@ -58,7 +58,7 @@
                 android:layout_marginBottom="24dp">
 
                 <EditText
-                    android:id="@+id/searchEmployee"
+                    android:id="@+id/staffIdUpdateEmp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -71,7 +71,7 @@
                     android:fontFamily="@font/roboto_regular" />
 
                 <Button
-                    android:id="@+id/searchButton"
+                    android:id="@+id/searchUpdateEmp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/button_background_blue"
@@ -81,26 +81,11 @@
                     android:fontFamily="@font/roboto_bold"
                     android:layout_marginStart="8dp"
                     android:padding="16dp"
-                    android:onClick="onClickSearchEmployee" />
+                    android:onClick="onClickSearchUpdateEmp" />
             </LinearLayout>
 
-            <!-- Employee Information Fields -->
             <EditText
-                android:id="@+id/staffIdUpdate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Staff ID"
-                android:background="@drawable/edit_text_rounded_fields"
-                android:padding="16dp"
-                android:inputType="text"
-                android:textColor="@color/colorTextBlack"
-                android:textSize="14sp"
-                android:fontFamily="@font/roboto_regular"
-                android:layout_marginBottom="12dp"
-                android:enabled="false" />
-
-            <EditText
-                android:id="@+id/firstNameUpdate"
+                android:id="@+id/firstNameUpdateEmp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="First Name"
@@ -113,7 +98,7 @@
                 android:layout_marginBottom="12dp" />
 
             <EditText
-                android:id="@+id/lastNameUpdate"
+                android:id="@+id/lastNameUpdateEmp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Last Name"
@@ -126,7 +111,7 @@
                 android:layout_marginBottom="12dp" />
 
             <Spinner
-                android:id="@+id/designationUpdate"
+                android:id="@+id/designationUpdateEmp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edit_text_rounded_fields"
@@ -137,7 +122,7 @@
                 android:layout_marginBottom="12dp" />
 
             <EditText
-                android:id="@+id/emailUpdate"
+                android:id="@+id/emailUpdateEmp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="E-Mail Address"
@@ -150,7 +135,7 @@
                 android:layout_marginBottom="12dp" />
 
             <EditText
-                android:id="@+id/contactNoUpdate"
+                android:id="@+id/contactNoUpdateEmp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Contact Number"
@@ -163,7 +148,7 @@
                 android:layout_marginBottom="12dp" />
 
             <EditText
-                android:id="@+id/usernameUpdate"
+                android:id="@+id/usernameUpdateEmp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Username"
@@ -185,14 +170,14 @@
                 android:layout_marginBottom="8dp" />
 
             <RadioGroup
-                android:id="@+id/groupUserRoleUpdate"
+                android:id="@+id/groupUserRoleUpdateEmp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginBottom="12dp">
 
                 <RadioButton
-                    android:id="@+id/radioAdminUpdate"
+                    android:id="@+id/radioAdminUpdateEmp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Administrator"
@@ -201,7 +186,7 @@
                     android:textSize="14sp" />
 
                 <RadioButton
-                    android:id="@+id/radioReceptionistUpdate"
+                    android:id="@+id/radioReceptionistUpdateEmp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Receptionist"
@@ -211,7 +196,7 @@
             </RadioGroup>
 
             <EditText
-                android:id="@+id/passwordUpdate"
+                android:id="@+id/passwordUpdateEmp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password"
@@ -224,7 +209,7 @@
                 android:layout_marginBottom="12dp" />
 
             <EditText
-                android:id="@+id/conPasswordUpdate"
+                android:id="@+id/conPasswordUpdateEmp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Confirm Password"
@@ -238,7 +223,7 @@
 
             <!-- Update Button -->
             <Button
-                android:id="@+id/updateEmp"
+                android:id="@+id/onClickSearchUpdateEmp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_background_blue"

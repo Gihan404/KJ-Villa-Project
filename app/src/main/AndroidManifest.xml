@@ -17,10 +17,7 @@
             android:exported="false" />
         <activity
             android:name=".ClientInquiryActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ClientInquiryiesActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".RoomUpdateActivity"
             android:exported="false" />
@@ -35,10 +32,10 @@
             android:exported="false" />
         <activity
             android:name=".EmployeeDeleteActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".EmployeeUpdateActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".EmployeeRegActivity"
             android:exported="true" />

@@ -11,8 +11,21 @@
       <entry key="ClientUpdateActivity">
         <State />
       </entry>
-      <entry key="RegisterActivity">
-        <State />
+      <entry key="EmployeeRegActivity">
+        <State>
+          <targetSelectedWithDropDown>
+            <Target>
+              <type value="QUICK_BOOT_TARGET" />
+              <deviceKey>
+                <Key>
+                  <type value="VIRTUAL_DEVICE_PATH" />
+                  <value value="C:\Users\Gihan\.android\avd\Pixel_8_API_30.avd" />
+                </Key>
+              </deviceKey>
+            </Target>
+          </targetSelectedWithDropDown>
+          <timeTargetWasSelectedWithDropDown value="2024-08-04T11:23:51.062818Z" />
+        </State>
       </entry>
       <entry key="WelcomeActivity">
         <State>
