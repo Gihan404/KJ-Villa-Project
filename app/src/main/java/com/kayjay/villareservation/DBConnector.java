@@ -21,6 +21,8 @@ public class DBConnector extends SQLiteOpenHelper {
         db.execSQL("CREATE TABLE employee(emp_id INTEGER primary key AUTOINCREMENT, staff_id TEXT, first_name TEXT, last_name TEXT," +
                 " designation TEXT, email TEXT, contact_no TEXT, username TEXT, user_role TEXT, password TEXT, status INTEGER)");
 
+        db.execSQL("CREATE TABLE room_type(type_id INTEGER primary key AUTOINCREMENT, type TEXT NOT NULL, description TEXT, " + "price REAL, adults INTEGER, children INTEGER, wifi INTEGER, ac INTEGER, tv INTEGER, bar INTEGER)");
+
 
         ContentValues contentValues = new ContentValues();
         contentValues.put("username", "admin");

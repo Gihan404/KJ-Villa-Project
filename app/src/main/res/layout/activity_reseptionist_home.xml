@@ -33,7 +33,7 @@
 
             <!-- View Reservations Card -->
             <androidx.cardview.widget.CardView
-                android:onClick="onClickViewReservations"
+                android:onClick="onClickRegisterNewClient"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 app:cardCornerRadius="15dp"
@@ -51,7 +51,7 @@
                         android:layout_gravity="center"
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-                        android:src="@drawable/ic_reservation"/>
+                        android:src="@drawable/ic_person"/>
 
                     <TextView
                         android:gravity="center"
@@ -61,7 +61,7 @@
                         android:fontFamily="@font/roboto_black"
                         android:textColor="@color/colorWhite"
                         android:textSize="19sp"
-                        android:text="View Reservations"/>
+                        android:text="Register New Client"/>
 
                 </LinearLayout>
 
@@ -97,7 +97,7 @@
                         android:fontFamily="@font/roboto_black"
                         android:textColor="@color/colorTextWhite"
                         android:textSize="19sp"
-                        android:text="Update Guest Info"/>
+                        android:text="Update Client Info"/>
 
                 </LinearLayout>
 
@@ -105,87 +105,6 @@
 
         </LinearLayout>
 
-        <!-- Row 2 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp">
-
-            <!-- Check-in Guest Card -->
-            <androidx.cardview.widget.CardView
-                android:onClick="onClickCheckInGuest"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                app:cardCornerRadius="15dp"
-                android:layout_margin="10dp"
-                android:elevation="10dp"
-                app:cardBackgroundColor="@color/colorPrimary">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_gravity="center">
-
-                    <ImageView
-                        android:layout_gravity="center"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:src="@drawable/ic_check_in"/>
-
-                    <TextView
-                        android:gravity="center"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:fontFamily="@font/roboto_black"
-                        android:textColor="@color/colorTextWhite"
-                        android:textSize="19sp"
-                        android:text="Check-in Guest"/>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <!-- Check-out Guest Card -->
-            <androidx.cardview.widget.CardView
-                android:onClick="onClickCheckOutGuest"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                app:cardCornerRadius="15dp"
-                android:layout_margin="10dp"
-                android:elevation="10dp"
-                app:cardBackgroundColor="@color/colorPrimary">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_gravity="center">
-
-                    <ImageView
-                        android:layout_gravity="center"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:src="@drawable/ic_check_out"/>
-
-                    <TextView
-                        android:gravity="center"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:fontFamily="@font/roboto_black"
-                        android:textColor="@color/colorTextWhite"
-                        android:textSize="19sp"
-                        android:text="Check-out Guest"/>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-        </LinearLayout>
 
         <!-- Row 3 -->
         <LinearLayout
@@ -231,9 +150,9 @@
 
             </androidx.cardview.widget.CardView>
 
-            <!-- Handle Complaints Card -->
+            <!-- View Reservations Card -->
             <androidx.cardview.widget.CardView
-                android:onClick="onClickHandleComplaints"
+                android:onClick="onClickViewReservations"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 app:cardCornerRadius="15dp"
@@ -251,7 +170,7 @@
                         android:layout_gravity="center"
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-                        android:src="@drawable/ic_complanint"/>
+                        android:src="@drawable/ic_reservation"/>
 
                     <TextView
                         android:gravity="center"
@@ -261,7 +180,7 @@
                         android:fontFamily="@font/roboto_black"
                         android:textColor="@color/colorTextWhite"
                         android:textSize="19sp"
-                        android:text="Handle Complaints"/>
+                        android:text="View Reservations"/>
 
                 </LinearLayout>
 

@@ -4,84 +4,39 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ClientUpdateActivity">
+    tools:context=".ClientRegisterActivity">
 
     <!-- Header section -->
     <LinearLayout
         android:id="@+id/header"
-        android:onClick="onClickBack"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
+        android:gravity="center"
+        android:orientation="vertical"
         android:padding="16dp">
 
-        <ImageButton
-            android:id="@+id/back_button"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/ic_round_arrow_back_ios_24" />
+            android:text="REGISTER"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="UPDATE PROFILE"
-                android:textColor="@android:color/white"
-                android:textSize="24sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Change your user information!"
-                android:textColor="@android:color/white"
-                android:textSize="16sp" />
-        </LinearLayout>
-    </LinearLayout>
-
-    <!-- Search Section -->
-    <LinearLayout
-        android:id="@+id/search_section"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="16dp"
-        android:layout_below="@id/header"
-        android:gravity="center_vertical">
-
-        <EditText
-            android:id="@+id/search_nic"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="Search by NIC"
-            android:background="@drawable/edit_text_rounded_fields"
-            android:padding="10dp"
-            android:layout_marginEnd="10dp"/>
-
-        <Button
-            android:id="@+id/search_button"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Search"
-            android:background="@color/colorPrimary"
-            android:textColor="@android:color/white"/>
+            android:text="Create a new account!"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
     </LinearLayout>
 
-    <!-- Profile Form inside ScrollView -->
+    <!-- Registration Form inside ScrollView -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/search_section"
+        android:layout_below="@id/header"
         android:padding="16dp">
 
         <LinearLayout
@@ -93,7 +48,7 @@
 
             <!-- First Name -->
             <EditText
-                android:id="@+id/fNameUpdateClient"
+                android:id="@+id/fNameRegisterClient"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="First Name"
@@ -103,7 +58,7 @@
 
             <!-- Last Name -->
             <EditText
-                android:id="@+id/lNameUpdateClient"
+                android:id="@+id/lNameRegisterClient"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Last Name"
@@ -113,18 +68,17 @@
 
             <!-- NIC Number -->
             <EditText
-                android:id="@+id/nicNoUpdateClient"
+                android:id="@+id/nicNoRegisterClient"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="NIC Number"
                 android:background="@drawable/edit_text_rounded_fields"
                 android:padding="10dp"
-                android:layout_marginBottom="10dp"
-                android:enabled="false"/>
+                android:layout_marginBottom="10dp"/>
 
             <!-- Email Address -->
             <EditText
-                android:id="@+id/emailUpdateClient"
+                android:id="@+id/emailRegisterClient"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="E-Mail Address"
@@ -134,7 +88,7 @@
 
             <!-- Contact Number -->
             <EditText
-                android:id="@+id/contactNoUpdateClient"
+                android:id="@+id/contactNoRegisterClient"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Contact Number"
@@ -144,7 +98,7 @@
 
             <!-- Address: Street No -->
             <EditText
-                android:id="@+id/streetNoUpdateClient"
+                android:id="@+id/streetNoRegisterClient"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Address: Street No"
@@ -154,7 +108,7 @@
 
             <!-- Address: Street Name -->
             <EditText
-                android:id="@+id/streetNameUpdateClient"
+                android:id="@+id/streetNameRegisterClient"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Address: Street Name"
@@ -164,7 +118,7 @@
 
             <!-- Address: City -->
             <EditText
-                android:id="@+id/cityUpdateClient"
+                android:id="@+id/cityRegisterClient"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Address: City"
@@ -174,7 +128,7 @@
 
             <!-- Address: Postal Code -->
             <EditText
-                android:id="@+id/postalCodeUpdateClient"
+                android:id="@+id/postalCodeRegisterClient"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Address: Postal Code"
@@ -184,7 +138,7 @@
 
             <!-- Address: Country -->
             <EditText
-                android:id="@+id/countryUpdateClient"
+                android:id="@+id/countryRegisterClient"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Address: Country"
@@ -192,9 +146,9 @@
                 android:padding="10dp"
                 android:layout_marginBottom="10dp"/>
 
-            <!-- UserName -->
+            <!-- Username -->
             <EditText
-                android:id="@+id/usernameUpdateClient"
+                android:id="@+id/usernameRegisterClient"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Username"
@@ -204,7 +158,7 @@
 
             <!-- Password -->
             <EditText
-                android:id="@+id/passwordUpdateClient"
+                android:id="@+id/passwordRegisterClient"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password"
@@ -215,7 +169,7 @@
 
             <!-- Confirm Password -->
             <EditText
-                android:id="@+id/conPasswordUpdateClient"
+                android:id="@+id/conPasswordRegisterClient"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Confirm Password"
@@ -224,15 +178,16 @@
                 android:padding="10dp"
                 android:layout_marginBottom="10dp"/>
 
-            <!-- Update Button -->
+            <!-- Register Button -->
             <Button
-                android:id="@+id/update_button"
+                android:id="@+id/register_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Update"
+                android:text="Register"
                 android:background="@color/colorPrimary"
                 android:textColor="@android:color/white"
-                android:layout_marginTop="16dp"/>
+                android:layout_marginTop="16dp"
+                android:onClick="onClickRegisterNewClient"/>
         </LinearLayout>
     </ScrollView>
 

@@ -1,9 +1,15 @@
 package com.kayjay.villareservation;
 
+import android.app.DatePickerDialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.view.View;
+import android.widget.DatePicker;
+
+import java.util.ArrayList;
+import java.util.Calendar;
 
 public class DataHandler {
 
@@ -185,4 +191,84 @@ public class DataHandler {
         }
     }
 
+    public boolean createRoomType(RoomType roomType) throws Exception{
+        // insert room type details in to db
+        try {
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("type", roomType.getRoomName());
+        contentValues.put("description", roomType.getRoomDescription());
+        contentValues.put("price", roomType.getRoomPrice());
+        contentValues.put("adults", roomType.getNumAdults());
+        contentValues.put("children", roomType.getNumChildren());
+        contentValues.put("wifi", roomType.isHasWiFi() ? 1 : 0);
+        contentValues.put("ac", roomType.isHasAC() ? 1 : 0);
+        contentValues.put("tv", roomType.isHasTV() ? 1 : 0);
+        contentValues.put("bar", roomType.isHasMinibar() ? 1 : 0);
+
+        System.out.println("Room Name: " + roomType.getRoomName());
+        System.out.println("Room Description: " + roomType.getRoomDescription());
+        System.out.println("Room Price: " + roomType.getRoomPrice());
+            System.out.println("Number of Adults: " + roomType.getNumAdults());
+            System.out.printf("Number of Children: " + roomType.getNumChildren());
+            System.out.println("Has WiFi: " + (roomType.isHasWiFi() ? "Yes" : "No"));
+
+
+        long result = db.insert("room_type", null, contentValues);
+        if (result == -1){
+            System.err.println("Failed to insert room type into database.");
+            return false;
+        }else {
+            System.out.println("Room type inserted with ID: " + result);
+            return true;
+        }
+        } catch (Exception e) {
+            e.printStackTrace(); // This will help you see exactly what went wrong
+            return false;
+        }
+    }
+
+    public ArrayList<String > searchAllRoomTypes() throws Exception{
+        ArrayList<String> roomTypes = new ArrayList<String>();
+        roomTypes.add("Select Room Type");
+        Cursor cursor = db.rawQuery("select * from room_type", null);
+        while (cursor.moveToNext()){
+            roomTypes.add(cursor.getString(1));
+        }
+        return roomTypes;
+    }
+
+    public boolean createReservation(Reservation reservation) throws  Exception {
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("check_in_date", reservation.getCheckInDate());
+        contentValues.put("check_out_date", reservation.getCheckOutDate());
+        contentValues.put("no_rooms", reservation.getNoOfRooms());
+        contentValues.put("board_type", reservation.getBoardingType());
+        contentValues.put("price", reservation.getPrice());
+        contentValues.put("no_adults", reservation.getNoOfAdults());
+        contentValues.put("no_children", reservation.getNoOfChildren());
+        contentValues.put("res_name", reservation.getResName());
+        contentValues.put("res_email", reservation.getResEmail());
+        contentValues.put("res_contact", reservation.getResContactNo());
+        contentValues.put("status", reservation.getStatus());
+        contentValues.put("roomType", reservation.getRoomType());
+        long result = db.insert("reservation", null, contentValues);
+        if (result == -1) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public boolean searchRoomTypes(RoomType roomType){
+        Cursor cursor = db.rawQuery("select * from room_type where type = '"+roomType.getRoomName()+"'", null);
+        if (cursor.moveToFirst()){
+            roomType.setRoomName(cursor.getString(1));
+            roomType.setRoomDescription(cursor.getString(2));
+            roomType.setNumChildren(cursor.getInt(4));
+            roomType.setNumAdults(cursor.getInt(5));
+            roomType.setRoomPrice(cursor.getDouble(6));
+            return true;
+        }
+        return false;
+    }
 }

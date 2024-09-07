@@ -5,43 +5,17 @@
       <entry key="AdminHomeActivity">
         <State />
       </entry>
-      <entry key="ClientInquiryActivity">
+      <entry key="ClientRegisterAdminActivity">
         <State />
       </entry>
       <entry key="ClientUpdateActivity">
         <State />
       </entry>
-      <entry key="EmployeeRegActivity">
-        <State>
-          <targetSelectedWithDropDown>
-            <Target>
-              <type value="QUICK_BOOT_TARGET" />
-              <deviceKey>
-                <Key>
-                  <type value="VIRTUAL_DEVICE_PATH" />
-                  <value value="C:\Users\Gihan\.android\avd\Pixel_8_API_30.avd" />
-                </Key>
-              </deviceKey>
-            </Target>
-          </targetSelectedWithDropDown>
-          <timeTargetWasSelectedWithDropDown value="2024-08-04T11:23:51.062818Z" />
-        </State>
+      <entry key="StartActivity">
+        <State />
       </entry>
       <entry key="WelcomeActivity">
-        <State>
-          <targetSelectedWithDropDown>
-            <Target>
-              <type value="QUICK_BOOT_TARGET" />
-              <deviceKey>
-                <Key>
-                  <type value="VIRTUAL_DEVICE_PATH" />
-                  <value value="C:\Users\Gihan\.android\avd\Pixel_8_API_30.avd" />
-                </Key>
-              </deviceKey>
-            </Target>
-          </targetSelectedWithDropDown>
-          <timeTargetWasSelectedWithDropDown value="2024-07-31T22:10:27.518385900Z" />
-        </State>
+        <State />
       </entry>
       <entry key="app">
         <State>

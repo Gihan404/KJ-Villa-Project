@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RoomReservationActivity"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_round_arrow_back_ios_24" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="48dp"
+                android:layout_marginRight="48dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25dp"
+                    android:fontFamily="@font/roboto_black"
+                    android:text="RESERVATION"
+                    android:textColor="@color/colorTextWhite"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Book your hotel room!"
+                    android:textColor="@color/colorTextWhite"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="980dp"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:elevation="36dp"
+            android:layout_marginTop="70dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginTop="25dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="From"
+                            android:textSize="25dp"
+                            android:textColor="@color/colorBlack"
+                            android:fontFamily="@font/roboto_bold"/>
+
+                        <TextView
+                            android:id="@+id/fromDateRoomReservation"
+                            android:layout_width="150dp"
+                            android:layout_height="51dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/edit_text_rounded_fields"
+                            android:fontFamily="@font/roboto_regular"
+                            android:gravity="center"
+                            android:hint="Date"
+                            android:inputType="text"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorTextBlack"
+                            android:textColorHint="@color/colorBlack"
+                            android:textSize="14dp" />
+
+                        <Button
+                            android:layout_width="60dp"
+                            android:layout_height="50dp"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:drawableLeft="@drawable/ic_round_calendar_month_white"
+                            android:fontFamily="@font/roboto_bold"
+                            android:onClick="onFromDateClickRoomReservation"
+                            android:paddingLeft="17dp"
+                            android:textColor="@color/colorTextWhite"
+                            android:textSize="17dp"
+                            app:cornerRadius="35dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginLeft="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="To"
+                            android:textSize="25dp"
+                            android:textColor="@color/colorBlack"
+                            android:fontFamily="@font/roboto_bold"/>
+
+                        <TextView
+                            android:id="@+id/toDateRoomReservation"
+                            android:layout_width="150dp"
+                            android:layout_height="51dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/edit_text_rounded_fields"
+                            android:fontFamily="@font/roboto_regular"
+                            android:gravity="center"
+                            android:hint="Date"
+                            android:inputType="text"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorTextBlack"
+                            android:textColorHint="@color/colorBlack"
+                            android:textSize="14dp" />
+
+                        <Button
+                            android:layout_width="60dp"
+                            android:layout_height="50dp"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:drawableLeft="@drawable/ic_round_calendar_month_white"
+                            android:fontFamily="@font/roboto_bold"
+                            android:onClick="onToDateClickRoomReservation"
+                            android:paddingLeft="17dp"
+                            android:textColor="@color/colorTextWhite"
+                            android:textSize="17dp"
+                            app:cornerRadius="35dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="250dp"
+                        android:layout_height="1dp"
+                        android:background="@android:color/black" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/adultsResForm"
+                            android:layout_width="match_parent"
+                            android:layout_height="51dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/edit_text_rounded_fields"
+                            android:fontFamily="@font/roboto_regular"
+                            android:hint="Adults"
+                            android:inputType="text"
+                            android:paddingLeft="26dp"
+                            android:paddingRight="26dp"
+                            android:textColor="@color/colorTextBlack"
+                            android:textSize="14dp" />
+
+                        <EditText
+                            android:id="@+id/childrenResForm"
+                            android:layout_width="match_parent"
+                            android:layout_height="51dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edit_text_rounded_fields"
+                            android:fontFamily="@font/roboto_regular"
+                            android:hint="Children"
+                            android:inputType="text"
+                            android:paddingLeft="26dp"
+                            android:paddingRight="26dp"
+                            android:textColor="@color/colorTextBlack"
+                            android:textSize="14dp" />
+
+
+                        <Spinner
+                            android:id="@+id/spRoomTypeResForm"
+                            android:layout_width="match_parent"
+                            android:layout_height="51dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edit_text_rounded_fields"
+                            android:fontFamily="@font/roboto_regular"
+                            android:hint="Select Room Type"
+                            android:inputType="text"
+                            android:paddingLeft="26dp"
+                            android:paddingRight="26dp"
+                            android:textColor="@color/colorTextBlack"
+                            android:textSize="14dp" />
+
+
+
+                        <EditText
+                            android:id="@+id/bordTypeResForm"
+                            android:layout_width="match_parent"
+                            android:layout_height="51dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edit_text_rounded_fields"
+                            android:fontFamily="@font/roboto_regular"
+                            android:hint="Boarding Type"
+                            android:inputType="text"
+                            android:paddingLeft="26dp"
+                            android:paddingRight="26dp"
+                            android:textColor="@color/colorTextBlack"
+                            android:textSize="14dp" />
+
+                        <EditText
+                            android:id="@+id/nameResForm"
+                            android:layout_width="match_parent"
+                            android:layout_height="51dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edit_text_rounded_fields"
+                            android:fontFamily="@font/roboto_regular"
+                            android:hint="Client Name"
+                            android:inputType="text"
+                            android:paddingLeft="26dp"
+                            android:paddingRight="26dp"
+                            android:textColor="@color/colorTextBlack"
+                            android:textSize="14dp" />
+
+                        <EditText
+                            android:id="@+id/contactResForm"
+                            android:layout_width="match_parent"
+                            android:layout_height="51dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edit_text_rounded_fields"
+                            android:fontFamily="@font/roboto_regular"
+                            android:hint="Contact Number"
+                            android:inputType="text"
+                            android:paddingLeft="26dp"
+                            android:paddingRight="26dp"
+                            android:textColor="@color/colorTextBlack"
+                            android:textSize="14dp" />
+
+                        <EditText
+                            android:id="@+id/emailResForm"
+                            android:layout_width="match_parent"
+                            android:layout_height="51dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edit_text_rounded_fields"
+                            android:fontFamily="@font/roboto_regular"
+                            android:hint="E-mail Address"
+                            android:inputType="textEmailAddress"
+                            android:paddingLeft="26dp"
+                            android:paddingRight="26dp"
+                            android:textColor="@color/colorTextBlack"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/roomPriceResForm"
+                            android:layout_width="match_parent"
+                            android:layout_height="51dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edit_text_rounded_fields"
+                            android:fontFamily="@font/roboto_bold"
+                            android:hint="Room Price"
+                            android:paddingLeft="26dp"
+                            android:paddingTop="15dp"
+                            android:paddingRight="26dp"
+                            android:textColor="@color/colorTextBlack"
+                            android:textSize="14dp" />
+
+                        <View
+                            android:layout_marginTop="10dp"
+                            android:layout_width="250dp"
+                            android:layout_height="1dp"
+                            android:background="@android:color/black" />
+
+
+                        <EditText
+                            android:id="@+id/noRoomsResForm"
+                            android:layout_width="match_parent"
+                            android:layout_height="51dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edit_text_rounded_fields"
+                            android:fontFamily="@font/roboto_regular"
+                            android:hint="Number of Rooms"
+                            android:inputType="text"
+                            android:paddingLeft="26dp"
+                            android:paddingRight="26dp"
+                            android:textColor="@color/colorTextBlack"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/totalPriceResForm"
+                            android:layout_width="match_parent"
+                            android:layout_height="51dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edit_text_rounded_fields"
+                            android:fontFamily="@font/roboto_bold"
+                            android:hint="Total Price"
+                            android:paddingLeft="26dp"
+                            android:paddingTop="15dp"
+                            android:paddingRight="26dp"
+                            android:textColor="@color/colorTextBlack"
+                            android:textSize="14dp" />
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="52dp"
+                            android:layout_marginLeft="48dp"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginRight="48dp"
+                            android:layout_gravity="center">
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="@color/colorPrimary"
+                                android:fontFamily="@font/roboto_bold"
+                                android:onClick="onClickCalculateTotalPrice"
+                                android:text="Calculate"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorTextWhite"
+                                android:textSize="17dp"
+                                app:cornerRadius="35dp" />
+
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="52dp"
+                            android:layout_marginLeft="48dp"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginRight="48dp"
+                            android:layout_gravity="center">
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="@color/colorPrimary"
+                                android:fontFamily="@font/roboto_bold"
+                                android:onClick="onClickCreateReservation"
+                                android:text="Reserve"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorTextWhite"
+                                android:textSize="17dp"
+                                app:cornerRadius="35dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

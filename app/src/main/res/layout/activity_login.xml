@@ -153,10 +153,9 @@
             android:layout_height="60dp"
             android:layout_below="@id/loginButton"
             android:layout_marginTop="60dp"
-            android:backgroundTint="@color/ColorButtonLight"
             android:fontFamily="@font/roboto_black"
             android:text="Sign Up"
-            android:textColor="@color/colorTextBlueLight"
+            android:textColor="@color/colorTextWhite"
             android:textSize="16sp" />
     </RelativeLayout>
 

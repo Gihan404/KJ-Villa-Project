@@ -28,6 +28,8 @@ public class Client {
     public Client() {
     }
 
+
+
     public Client(String firstName, String lastName, String nic, String email, String contactNo, String streetNo, String streetName, String city, String postalCode, String country, String username, String password, String confirmPassword, String type, int createUpdateUID, Date createUpdateDate, int clientId) {
         this.firstName = firstName;
         this.lastName = lastName;
